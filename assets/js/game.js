@@ -39,7 +39,7 @@
             if (confirmSkip) {
                 window.alert(playerInfo.name + " has decided to skip this fight. Goodbye!");
                 // subtract money from playermoney for skipping
-                playerInfo.playerMoney = playerInfo.money - 10;
+                playerInfo.playerMoney = Math.max(0, playerInfo.money - 10);
     
                 // return true if player wants to leave
                 return true;
@@ -97,7 +97,7 @@
                         window.alert(playerInfo.name + " has died!");
                     break;
                 }   else {
-                window.alert(playerInfo.name + " still has " + playerInfo.health + " has left");
+                        window.alert(playerInfo.name + " still has " + playerInfo.health + " has left");
                 }
             }
             isPlayerTurn = !isPlayerTurn;
@@ -185,7 +185,7 @@
       
       // if player is still alive, player wins
         // if (playerInfo.health > 0) {
-            window.alert("Great job, you've survived the game! You now have a score of " + playerInfo.money + '."');
+            // window.alert("Great job, you've survived the game! You now have a score of " + playerInfo.money + '."');
         // }
         // else {
             // window.alert("You've lost your robot in battle");
